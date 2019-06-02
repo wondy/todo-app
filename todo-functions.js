@@ -78,6 +78,7 @@ const generateTodoDOM = (todo) => {
     // removeButton.textContent = ' remove todo'
     removeButton.setAttribute ("class","fa fa-thumbs-o-up")
     
+    
     todoEl.appendChild(removeButton)
     removeButton.addEventListener('click', () => {
         removeTodo(todo.id)
