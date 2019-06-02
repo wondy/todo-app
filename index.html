@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="bulma.css">
+    </head>
+
+    <body>
+        <section class="hero is-primary">
+        <div class="hero-body">
+              <div class="container">
+                    <h1 class="title is-1">Todos</h1>
+                    <h2 class="subtitle">Working the effective way</h2>
+
+                        <!-- create new todo-->        
+                        <div class="card">
+                                <div class="card-content">
+                                    <form id="new-todo">
+                                    <input type="text" placeholder="Something to do" name="text">
+                                    <button class = "button">Add Todo</button>
+                                    </form>
+                                </div>
+                        </div>   
+                    
+            </div>
+        </div>
+            
+    </section>
+<!-- this is where the todos are beeing desplayed -->
+        <div class="card">
+        <div id="todos" class="card-content"></div>
+        <div>
+
+<!-- filter todos -->
+<input id="search-text" type="text" placeholder="Filter todos">
+    <label>
+       <input type="checkbox" id="hide-completed"> Hide completed
+    </label>
+
+        <!-- load scripts -->
+        <script src="http://wzrd.in/standalone/uuid%2Fv4@latest"></script>
+        <script src="todo-functions.js"></script>
+        <script src="todo-app.js"></script>
+    </body>
+</html>
