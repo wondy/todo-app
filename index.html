@@ -2,44 +2,59 @@
 
 <html>
     <head>
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="bulma.css">
+        <title>To-do App</title>
+        <link href="custom.css" rel="stylesheet">
+        <link href="/images/favicon.png?v=1" rel="icon">
     </head>
-
     <body>
-        <section class="hero is-primary">
-        <div class="hero-body">
-              <div class="container">
-                    <h1 class="title is-1">Todos</h1>
-                    <h2 class="subtitle">Working the effective way</h2>
 
-                        <!-- create new todo-->        
-                        <div class="card">
-                                <div class="card-content">
-                                    <form id="new-todo">
-                                    <input type="text" placeholder="Something to do" name="text">
-                                    <button class = "button">Add Todo</button>
-                                    </form>
-                                </div>
-                        </div>   
-                    
+ <!-- HEADER -->
+        <div class="header">
+            <div class="container">
+                <h1 class="header__title">Task Watch</h1>
+                <h2 class="header__subtitle">What do you need to do?</h2>
+            </div>
+ 
+<!-- create todo -->
+        <div class="container">
+                <form id="new-todo" class="form">
+                    <input type="text" class="input_addtodo" placeholder="Something to do" name="text">
+                    <button class="button">Add Todo</button>
+                </form>
             </div>
         </div>
-            
-    </section>
-<!-- this is where the todos are beeing desplayed -->
-        <div class="card">
-        <div id="todos" class="card-content"></div>
-        <div>
 
-<!-- filter todos -->
-<input id="search-text" type="text" placeholder="Filter todos">
-    <label>
-       <input type="checkbox" id="hide-completed"> Hide completed
-    </label>
+<!-- currently working on label -->
+<div class="container">
+    
+        <h1 class="header__subtitle">Currently working on:</h1>
+        <div id ="working_on_label" class="list-item-workon"> 
+        <div id ="working_on" class="list-item__container_workon">NO WORK?</div>
+        </div>
+    </div>
 
-        <!-- load scripts -->
-        <script src="http://wzrd.in/standalone/uuid%2Fv4@latest"></script>
+
+
+
+
+<!-- Hide completed checkbos -->
+        <div class="container">
+                <label class="checkbox">
+                        <input type="checkbox" id="hide-completed"> Hide completed
+                    </label>
+<!-- Print Todos  -->
+            <div id="todos"></div>
+        </div>
+       
+<!-- search todo -->
+<div class="actions">
+        <div class="actions__container">
+            <input id="search-text" class="input_filtertodo" type="text" placeholder="Filter todos">
+           
+        </div>
+    </div>
+        
+        <script src="uuidv4.js"></script>
         <script src="todo-functions.js"></script>
         <script src="todo-app.js"></script>
     </body>
