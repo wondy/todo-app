@@ -7,7 +7,7 @@ container.setAttribute('class', 'header');
 app.appendChild(container);
 
 var request = new XMLHttpRequest();
-request.open('GET', 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json', true);
+request.open('GET', 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp', true);
 request.onload = function () {
 
   // Begin accessing JSON data here
