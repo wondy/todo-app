@@ -25,6 +25,7 @@ $.ajax({
 
       const h1 = document.createElement('h1');
       h1.textContent = data.quoteText;
+      const p = document.createElement('p');
   
       container.appendChild(card);
       card.appendChild(h1);   
