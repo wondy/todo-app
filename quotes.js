@@ -7,7 +7,7 @@ container.setAttribute('class', 'header');
 app.appendChild(container);
 
 var request = new XMLHttpRequest();
-request.open('GET', 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp', true);
+request.open('GET', 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?', true);
 request.onload = function () {
 
   // Begin accessing JSON data here
@@ -19,16 +19,13 @@ request.onload = function () {
 
       const h1 = document.createElement('h1');
       h1.textContent = quotes.quoteText;
-
-    
-
+  
       container.appendChild(card);
-      card.appendChild(h1);
-      
+      card.appendChild(h1);   
       card.appendChild(p);
     });
   } else {
-    const errorMessage = document.createElement('marquee');
+    const errorMessage = document.createElement('div');
     errorMessage.textContent = `Gah, it's not working!`;
     app.appendChild(errorMessage);
   }
