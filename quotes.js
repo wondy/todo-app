@@ -13,7 +13,7 @@ container.setAttribute('class', 'header');
 app.appendChild(container);
 
 $.ajax({
-    url: 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?',
+    url: 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?',
     dataType: 'jsonp',
     success: function(data) {
       // your code to handle data here
