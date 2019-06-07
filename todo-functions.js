@@ -1,9 +1,6 @@
 'use strict'
 
 
-
-
-
 // Fetch existing todos from localStorage
 const getSavedTodos = () => {
     const todosJSON = localStorage.getItem('todos')
@@ -118,7 +115,7 @@ const generateTodoDOM = (todo) => {
      workonButton.addEventListener('click', () => {
          workOnTodo(todo.id)
         
-         task.innerHTML = todo.id.text
+         task.textContent = todo.text
          removeTodo(todo.id)
          saveTodos(todos)
          renderTodos(todos, filters)

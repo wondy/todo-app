@@ -40,7 +40,7 @@ document.querySelector('#hide-completed').addEventListener('change', (e) => {
 
 /* check if work on label has been clicked */
 document.querySelector('#working_on_label').addEventListener('click', (e) => {
-    const text = e.target.innerText
+   /*  const text = e.target.innerText
     if (text != 'NO WORK?')
      { e.target.innerText = ""
     e.target.innerText ="NO WORK?"
@@ -53,7 +53,21 @@ document.querySelector('#working_on_label').addEventListener('click', (e) => {
         })
         saveTodos(todos)
         renderTodos(todos, filters)
-    } 
+    } */
+    const text = e.target.innerText.trim()
+    e.preventDefault()
+
+    if (text.length > 0) {
+        todos.push({
+            id: uuidv4(),
+            text,
+            completed: false
+        })
+        saveTodos(todos)
+        renderTodos(todos, filters)
+        e.target.elements.text.value = ''
     }
+}
+    
   
 )
