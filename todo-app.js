@@ -41,7 +41,8 @@ document.querySelector('#hide-completed').addEventListener('change', (e) => {
 /* check if work on label has been clicked */
 document.querySelector('#working_on_label').addEventListener('click', (e) => {
     const text = e.target.innerText
-    e.target.innerText = ""
+    if (text != 'NO WORK?')
+     { e.target.innerText = ""
     e.target.innerText ="NO WORK?"
   
     
@@ -52,7 +53,7 @@ document.querySelector('#working_on_label').addEventListener('click', (e) => {
         })
         saveTodos(todos)
         renderTodos(todos, filters)
-       
+    } 
     }
   
 )

@@ -118,7 +118,7 @@ const generateTodoDOM = (todo) => {
      workonButton.addEventListener('click', () => {
          workOnTodo(todo.id)
         
-         task.innerHTML = todo.text
+         task.innerHTML = todo.id.text
          removeTodo(todo.id)
          saveTodos(todos)
          renderTodos(todos, filters)
