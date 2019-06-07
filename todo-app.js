@@ -12,10 +12,10 @@ const filters = {
 renderTodos(todos, filters)
 
 /* Listen to the Filter todos Field and Render */
-document.querySelector('#search-text').addEventListener('input', (e) => {
+/* document.querySelector('#search-text').addEventListener('input', (e) => {
     filters.searchText = e.target.value
     renderTodos(todos, filters)
-})
+}) */
 
 /* create new todo */
 document.querySelector('#new-todo').addEventListener('submit', (e) => {
