@@ -38,34 +38,25 @@ document.querySelector('#hide-completed').addEventListener('change', (e) => {
     renderTodos(todos, filters)
 })
 
-/* check if work on label has been clicked */
+/* check if current working_on Main label has been clicked */
 document.querySelector('#working_on_label').addEventListener('click', (e) => {
-   /*  const text = e.target.innerText
-    if (text != 'NO WORK?')
-     { e.target.innerText = ""
-    e.target.innerText ="NO WORK?"
   
-    
-        todos.push({
-            id: uuidv4(),
-            text,
-            completed: false
-        })
-        saveTodos(todos)
-        renderTodos(todos, filters)
-    } */
     const text = e.target.innerText.trim()
     e.preventDefault()
-
-    if (text.length > 0) {
-        todos.push({
-            id: uuidv4(),
+  
+    if (text != 'NO WORK?')
+    { 
+   e.target.innerText ="NO WORK?"
+       
+   todos.push({
+            id: todos.id,
             text,
             completed: false
         })
+        
         saveTodos(todos)
         renderTodos(todos, filters)
-        e.target.elements.text.value = ''
+        
     }
 }
     

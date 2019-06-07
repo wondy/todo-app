@@ -37,11 +37,6 @@ const removeTodo = (id) => {
     }
 }
 
-//Put todo id back to array
-//
-//
-//
-//
 
 
 // Toggle the completed value for a given todo
@@ -87,7 +82,7 @@ const generateTodoDOM = (todo) => {
     const todoText = document.createElement('span')
     const removeButton = document.createElement('button')
     const workonButton = document.createElement('button')
-    const task = document.querySelector('#working_on')
+    const task = document.querySelector('#working_on_label')
 
     // Setup todo checkbox
     checkbox.setAttribute('type', 'checkbox')
