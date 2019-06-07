@@ -220,6 +220,9 @@ a {
 .list-item-workon:hover
 {
         background:#53a7ea;
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
 }
 
 .list-item__container {
