@@ -15,6 +15,7 @@ const getSavedTodos = () => {
 // Save todos to localStorage
 const saveTodos = (todos) => {
     localStorage.setItem('todos', JSON.stringify(todos))
+   
 }
 
 // pick working todo by id
@@ -100,6 +101,10 @@ const generateTodoDOM = (todo) => {
 
     // Setup container
     todoEl.classList.add('list-item')
+    if (canAnimate)
+    {
+    todoEl.classList.add('list-item-animation')
+    }
     containerEl.classList.add('list-item__container')
     todoEl.appendChild(containerEl)
 

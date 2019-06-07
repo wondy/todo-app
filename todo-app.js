@@ -1,5 +1,7 @@
 'use strict'
 
+let canAnimate = true
+
 let todos = getSavedTodos()
 
 const filters = {
@@ -17,6 +19,7 @@ document.querySelector('#search-text').addEventListener('input', (e) => {
 
 /* create new todo */
 document.querySelector('#new-todo').addEventListener('submit', (e) => {
+    canAnimate = true;
     const text = e.target.elements.text.value.trim()
     e.preventDefault()
 
@@ -40,7 +43,7 @@ document.querySelector('#hide-completed').addEventListener('change', (e) => {
 
 /* check if current working_on Main label has been clicked */
 document.querySelector('#working_on_label').addEventListener('click', (e) => {
-  
+    canAnimate = false
     const text = e.target.innerText.trim()
     e.preventDefault()
   

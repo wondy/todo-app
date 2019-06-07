@@ -249,10 +249,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: bounce-top 0.9s both;
+    
 }
 
-
+.list-item-animation {
+    animation: bounce-top 0.9s both;
+}
 
 .list-item-workon {
     text-decoration: none;
