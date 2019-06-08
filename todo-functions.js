@@ -98,12 +98,14 @@ const generateTodoDOM = (todo) => {
     // Setup the todo text
     todoText.textContent = todo.text
     containerEl.appendChild(todoText)
+    containerEl.classList.add('todoText_width');
 
     // Setup container
     todoEl.classList.add('list-item')
     if (canAnimate)
     {
     todoEl.classList.add('list-item-animation')
+   
     }
     containerEl.classList.add('list-item__container')
     todoEl.appendChild(containerEl)
@@ -114,7 +116,6 @@ const generateTodoDOM = (todo) => {
      todoEl.appendChild(workonButton)
      workonButton.addEventListener('click', () => {
          workOnTodo(todo.id)
-        
          task.textContent = todo.text
          removeTodo(todo.id)
          saveTodos(todos)
