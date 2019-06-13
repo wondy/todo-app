@@ -41,7 +41,8 @@ document.querySelector('#hide-completed').addEventListener('change', (e) => {
     renderTodos(todos, filters)
 })
 
-/* check if current working_on Main label has been clicked */
+/* check if current working_on Main label has been clicked
+and put task back to stack */
 document.querySelector('#working_on_label').addEventListener('click', (e) => {
     canAnimate = false
     const text = e.target.innerText.trim()
@@ -65,3 +66,7 @@ document.querySelector('#working_on_label').addEventListener('click', (e) => {
     
   
 )
+
+if (todos.text = 'No Work!') {
+    document.querySelector(working_on_label).classList.add('list-item-workon-blink-1')
+}
