@@ -8,6 +8,7 @@ const filters = {
     searchText: '',
     hideCompleted: false
 }
+
 /* First Time Print on Screen on Start */
 renderTodos(todos, filters)
 
@@ -19,6 +20,7 @@ renderTodos(todos, filters)
 
 /* create new todo */
 document.querySelector('#new-todo').addEventListener('submit', (e) => {
+    
     canAnimate = true;
     const text = e.target.elements.text.value.trim()
     e.preventDefault()
@@ -36,21 +38,22 @@ document.querySelector('#new-todo').addEventListener('submit', (e) => {
 })
 
 /* checkbox check for hide completed */
-document.querySelector('#hide-completed').addEventListener('change', (e) => {
-    filters.hideCompleted = e.target.checked
-    renderTodos(todos, filters)
-})
+// document.querySelector('#hide-completed').addEventListener('change', (e) => {
+//     filters.hideCompleted = e.target.checked
+//     renderTodos(todos, filters)
+// })
 
-/* check if current working_on Main label has been clicked
+/* check if "back to stack" button been clicked
 and put task back to stack */
-document.querySelector('#working_on_label').addEventListener('click', (e) => {
+document.querySelector('#back_to_stack').addEventListener('click', (e) => {
+    removeGradient()
     canAnimate = false
-    const text = e.target.innerText.trim()
+    const text = document.querySelector('#working_on_label').innerText.trim()
     e.preventDefault()
   
     if (text != 'NO WORK?')
     { 
-   e.target.innerText ="NO WORK?"
+   
        
    todos.push({
             id: todos.id,
@@ -62,11 +65,16 @@ document.querySelector('#working_on_label').addEventListener('click', (e) => {
         renderTodos(todos, filters)
         
     }
-}
-    
-  
-)
+})
 
-if (todos.text = 'No Work!') {
-    document.querySelector(working_on_label).classList.add('list-item-workon-blink-1')
-}
+//check if button completed has been clicked
+document.querySelector('#completed').addEventListener('click', (e) => {
+//toggleTodo(todos.id)
+document.querySelector('#working_on_label').innerText ="NO WORK?"
+removeGradient()
+saveTodos(todos)
+renderTodos(todos, filters)
+
+})
+
+

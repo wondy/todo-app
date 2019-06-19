@@ -25,11 +25,15 @@ $.ajax({
 
       const h1 = document.createElement('h1');
       h1.textContent = data.quoteText;
+      const author = document.createElement('span');
+      author.textContent = data.quoteAuthor;
       const p = document.createElement('p');
   
       container.appendChild(card);
       card.appendChild(h1);   
+      card.appendChild(author);
       card.appendChild(p);
+      
     }
 });
   

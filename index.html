@@ -12,7 +12,7 @@
  <!-- HEADER -->
         <div class="header">
             <div class="container">
-                <h1 class="header__title">Task Watch</h1>
+                <h1 class="header__title">Some Name or some logo here</h1>
                 <div id="quote"  class="quotes"></div>
                 
             </div>
@@ -22,8 +22,8 @@
 <!-- create todo -->
         <div class="container">
                 <form id="new-todo" class="form">
-                    <input type="text" class="input_addtodo" placeholder="Something to do" name="text">
-                    <button class="button">Add Todo</button>
+                    <input type="text" class="input_addtodo" placeholder="Enter task here" name="text">
+                    <button class="button">Add a Task</button>
                 </form>
             </div>
         </div>
@@ -31,21 +31,20 @@
 <!-- currently working on label -->
 <div class="container">
     
-        <h1 class="header__subtitle">Currently working on:</h1>
-        <div id ="working_on_label" class="list-item-workon animate-bg-gradient"> 
+        
+        <div id ="working_on_label" class="list-item-workon"> 
         <div id ="working_on" class="list-item__container_workon">NO WORK?</div>
         </div>
+        <button class="button" id="completed">set to completed</button>
+        <button class="button" id="back_to_stack">back to stack</button>
     </div>
 
-
-
-
-
-<!-- Hide completed checkbos -->
         <div class="container">
-                <label class="checkbox">
+            <!-- Hide completed checkbox -->
+                <!-- <label class="checkbox">
                         <input type="checkbox" id="hide-completed"> Hide completed
-                    </label>
+                    </label> -->
+                    
 <!-- Print Todos  -->
             <div id="todos"></div>
         </div>

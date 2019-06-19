@@ -211,6 +211,8 @@ a {
   font-family: 'Varela Round', sans-serif;
 }
 
+
+
 /* Actions Bar */
 
 .actions {
@@ -377,11 +379,6 @@ a {
 	        animation: blink-1 0.6s both;
 }
 
-.list-item-workon:hover
-{
-        background:#53a7ea;
-       
-}
 
 .list-item__container {
     display: flex;

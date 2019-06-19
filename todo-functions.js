@@ -1,5 +1,7 @@
 'use strict'
 
+let addGradient = ( ) => {document.querySelector('#working_on_label').classList.add("animate-bg-gradient")}
+let removeGradient = ( ) => {document.querySelector('#working_on_label').classList.remove("animate-bg-gradient")}
 
 // Fetch existing todos from localStorage
 const getSavedTodos = () => {
@@ -41,13 +43,13 @@ const removeTodo = (id) => {
 
 
 // Toggle the completed value for a given todo
-const toggleTodo = (id) => {
-    const todo = todos.find((todo) => todo.id === id)
+// const toggleTodo = (id) => {
+//     const todo = todos.find((todo) => todo.id === id)
 
-    if (todo) {
-        todo.completed = !todo.completed
-    }
-}
+//     if (todo) {
+//         todo.completed = !todo.completed
+//     }
+// }
 
 // Render application todos based on filters
 const renderTodos = (todos, filters) => {
@@ -64,38 +66,41 @@ const renderTodos = (todos, filters) => {
     todoEl.appendChild(generateSummaryDOM(incompleteTodos))
 
     if (filteredTodos.length > 0) {
+        
         filteredTodos.forEach((todo) => {
             todoEl.appendChild(generateTodoDOM(todo))
         })
     } else {
         const messageEl = document.createElement('p')
         messageEl.classList.add('empty-message')
-        messageEl.textContent = 'There are no to-dos to show'
+        messageEl.textContent = 'Start creating some new tasks now'
         todoEl.appendChild(messageEl)
+        
     }
+   
 }
 
 // Get the DOM elements for an individual note
 const generateTodoDOM = (todo) => {
     const todoEl = document.createElement('label')
     const containerEl = document.createElement('div')
-    const checkbox = document.createElement('input')
+    //const checkbox = document.createElement('input')
     const todoText = document.createElement('span')
     const removeButton = document.createElement('button')
     const workonButton = document.createElement('button')
     const task = document.querySelector('#working_on_label')
 
     // Setup todo checkbox
-    checkbox.setAttribute('type', 'checkbox')
-    checkbox.checked = todo.completed
-    containerEl.appendChild(checkbox)
-    checkbox.addEventListener('change', () => {
-        toggleTodo(todo.id)
-        saveTodos(todos)
-        renderTodos(todos, filters)
-    })
+    // checkbox.setAttribute('type', 'checkbox')
+    // checkbox.checked = todo.completed
+    // containerEl.appendChild(checkbox)
+    // checkbox.addeventlistener('change', () => {
+    //     toggletodo(todo.id)
+    //     savetodos(todos)
+    //     rendertodos(todos, filters)
+    // })
 
-    // Setup the todo text
+    // Setup the todo text in stack
     todoText.textContent = todo.text
     containerEl.appendChild(todoText)
     containerEl.classList.add('todoText_width');
@@ -115,12 +120,12 @@ const generateTodoDOM = (todo) => {
      workonButton.classList.add('button', 'button--text')
      todoEl.appendChild(workonButton)
      workonButton.addEventListener('click', () => {
+         addGradient()
          workOnTodo(todo.id)
          task.textContent = todo.text
          removeTodo(todo.id)
          saveTodos(todos)
-         renderTodos(todos, filters)
-         
+         renderTodos(todos, filters)      
      }) 
 
 
