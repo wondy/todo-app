@@ -1,0 +1,4 @@
+owner: wondy
+repo: todo-app
+provider: github
+updaterCacheDirName: taskdone-updater

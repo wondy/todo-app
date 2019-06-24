@@ -1,0 +1,8 @@
+version: 1.0.0
+files:
+  - url: taskdone-setup-1.0.0.exe
+    sha512: SxtC5+EL+XAI5eNfYmu3BM1r7ssKeHDRBl7w3TiYLOkaaqtuEQKCdRv/HJFsg5w9zFXyTlJ0/7ta6Z3oFj3yBA==
+    size: 44955719
+path: taskdone-setup-1.0.0.exe
+sha512: SxtC5+EL+XAI5eNfYmu3BM1r7ssKeHDRBl7w3TiYLOkaaqtuEQKCdRv/HJFsg5w9zFXyTlJ0/7ta6Z3oFj3yBA==
+releaseDate: '2019-06-24T10:51:47.357Z'

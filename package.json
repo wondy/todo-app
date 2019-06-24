@@ -1,0 +1,65 @@
+{
+  "name": "taskdone",
+  "version": "1.0.0",
+  "description": "get your tasks done",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.yourappid",
+
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wondy/todo-app.git"
+  },
+  "keywords": [
+    "task"
+  ],
+  "author": "MeMyselfandEye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wondy/todo-app/issues"
+  },
+  "homepage": "https://github.com/wondy/todo-app#readme",
+  "devDependencies": {
+    "electron": "^5.0.5",
+    "electron-builder": "^20.44.4",
+    "webpack": "^4.35.0"
+  },
+  "dependencies": {
+    "yarn": "^1.16.0"
+  }
+}
